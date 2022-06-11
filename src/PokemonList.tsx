@@ -30,7 +30,7 @@ const PokemonListComponent: React.FC = () => {
                 queryClient.prefetchQuery(
                   ["Pokemon", pokemon.name],
                   () => fetchPokemon(pokemon.name),
-                  { staleTime: 10 * 1000 }
+                  { staleTime: Infinity }
                 );
               }}
             >
